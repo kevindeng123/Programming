@@ -9,7 +9,8 @@ url = 'http://xkcd.com'
 os.makedirs('xkcd', exist_ok=True)
 while not url.endswith('#'):
     # Download the page.
-
+    print('Downloading page %s...' % url)
+    
     # Find the URL of the comic image.
 
     # Download the image.
