@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w2n-zZ-egN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tvl-kW-UZX">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -26,17 +26,17 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYa-nT-gXM">
-                                            <rect key="frame" x="30" y="10" width="206" height="23.5"/>
+                                            <rect key="frame" x="20" y="9" width="290" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="KYa-nT-gXM" firstAttribute="top" secondItem="ovp-2i-TFF" secondAttribute="top" constant="10" id="2sa-zO-VjN"/>
-                                        <constraint firstItem="KYa-nT-gXM" firstAttribute="leading" relation="lessThanOrEqual" secondItem="ovp-2i-TFF" secondAttribute="leading" constant="30" id="erS-Zw-ICx"/>
+                                        <constraint firstItem="KYa-nT-gXM" firstAttribute="top" secondItem="ovp-2i-TFF" secondAttribute="top" constant="9" id="2sa-zO-VjN"/>
+                                        <constraint firstAttribute="trailing" secondItem="KYa-nT-gXM" secondAttribute="trailing" constant="60" id="52d-C5-dkC"/>
+                                        <constraint firstItem="KYa-nT-gXM" firstAttribute="leading" secondItem="ovp-2i-TFF" secondAttribute="leading" constant="20" id="erS-Zw-ICx"/>
                                         <constraint firstAttribute="bottom" secondItem="KYa-nT-gXM" secondAttribute="bottom" constant="10" id="hY2-MA-2H9"/>
-                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="KYa-nT-gXM" secondAttribute="trailing" constant="134" id="kvA-5V-BcA"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -46,8 +46,33 @@
                             <outlet property="delegate" destination="w2n-zZ-egN" id="xmk-2P-vUE"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="CHECKLIST" id="H9B-Hc-HPq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="91f-3w-5cf">
+                            <connections>
+                                <action selector="addItem" destination="w2n-zZ-egN" id="Oma-5j-kMx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DFY-tx-Ywt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750.72463768115949" y="88.392857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Y8j-qz-axN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tvl-kW-UZX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gVT-Xt-TOU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w2n-zZ-egN" kind="relationship" relationship="rootViewController" id="aGJ-2h-QRH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJ2-iz-U7y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-159.42028985507247" y="88.392857142857139"/>
         </scene>
